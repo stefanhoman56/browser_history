@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style type="text/css">
+    body {
+      width: 240px;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+    }
+
+    .parent {
+      padding: 5px;
+    }
+
+    .child {
+      text-align: center;
+      margin: 5px;
+    }
+  </style>
+  <script src="scripts/core.js"></script>
+  <script src="scripts/popup.js"></script>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child" style="margin-bottom: 15px;">
+      <span style="font-size: 18px;">Export Chrome History</span>
+    </div>
+    <div class="child">
+      <span style="font-size: 18px;">How far back?</span>
+      <select style="font-size:16px;" id="timeSelect">
+        <option value="day">a day</option>
+        <option value="week" selected="selected">a week</option>
+        <option value="month">a month</option>
+        <option value="forever">forever</option>
+      </select><br>
+    </div>
+    <div id="msgDiv" class="child">&nbsp</div>
+    <div class="child">
+      <button id="csvButton">Download as CSV</button>
+    </div>
+    <div class="child">
+      <button id="jsonButton">Download as JSON</button>
+    </div>
+    <div class="child">
+      <button id="dashButton">Dashboard</button>
+    </div>
+  </div>
+</body>
+
+</html>
